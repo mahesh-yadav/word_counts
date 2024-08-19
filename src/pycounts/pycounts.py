@@ -44,7 +44,7 @@ def clean_text(text: str) -> str:
     'early optimization is the root of all evil'
     """
     text = text.lower()
-    
+
     for p in punctuation:
         text = text.replace(p, "")
 
@@ -54,7 +54,7 @@ def clean_text(text: str) -> str:
 def count_words(input_file: str) -> Counter:
     """Count words in a text file.
 
-    Words are made lowercase and punctuation is removed 
+    Words are made lowercase and punctuation is removed
     before counting.
 
     Parameters

@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 from collections import Counter
 
+
 def plot_words(word_counts, n=10):
     """Plot a bar chart of word counts.
-    
+
     Parameters
     ----------
     word_counts : collections.Counter
@@ -25,7 +26,7 @@ def plot_words(word_counts, n=10):
     """
     if not isinstance(word_counts, Counter):
         raise TypeError("'word_counts' must be a 'Counter' object.")
-    
+
     top_n_words = word_counts.most_common(n)
     word, count = zip(*top_n_words)
     fig = plt.bar(range(n), count)
